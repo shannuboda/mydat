@@ -1,4 +1,3 @@
-# mydat
 <html>
 <title> input</title>
 <head>
