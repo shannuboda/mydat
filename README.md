@@ -1,43 +1,16 @@
-<html>
-<title> input</title>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
-<script>
-function SubForm (){
-    $.ajax({
-        url:'https://api.apispreadsheets.com/data/9998/',
-        type:'post',
-        data:$("#myForm").serializeArray(),
-        success: function(){
-          alert("Form Data Submitted :)")
-		  alert("Form Data Submitted :)")
-        },
-        error: function(){
-          alert("There was an error :(")
-        }
-    });
-}
-</script>
+    <title>Opening Links in an iFrame</title>
+	<style>
+		iframe {
+			width: 100%;
+			height: 500px;
+		}
+	</style>
 </head>
 <body>
-<form id="myForm">
-    <label>Full Name</label>
-    <br/>
-    <input name="full_name" />
-    <br/>
-    <label>RollNum</label>
-    <br/>
-    <input name="RollNum" />
-    <br/>
-    <label>gender</label>
-    <br/>
-    <input type="radio" id="gender" name="gender" value="male" /> male<br/>
-    <input type="radio" id="gender" name="gender" value="female" /> Female<br/>
-    <br/>
-  </form>
-  <button onclick="SubForm()">Submit</button>
-  </body>
+    <iframe src="/examples/html/hello.html" name="myFrame"></iframe>
+    <p><a href="https://colab.research.google.com/drive/1ZciD9X4_PqhRGWPu4_rgGJR_0jR4NCXv" target="myFrame">Open TutorialRepublic.com</a></p>
+</body>
 </html>
